@@ -6,7 +6,8 @@ return {
     opts = {
         servers = {
             lua_ls = {},
-            kotlin_lsp = {}
+            kotlin_lsp = {},
+            rust_analyzer = {}
         }
     },
 
@@ -17,6 +18,7 @@ return {
         for _, server in ipairs({
             "lua_ls",
             "kotlin_lsp",
+            "rust_analyzer",
         }) do
             vim.lsp.config(server, {
                 capabilities = capabilities,
