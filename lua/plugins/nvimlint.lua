@@ -24,32 +24,32 @@ return {
 			end,
 		})
 
-		local setmap = vim.keymap.set
 
 		--- Keymap lintter
+		local setmap = vim.keymap.set
 
-		setmap("n", "<leader>tl", lint.try_lint, {
-			desc = "Trigger linting for the current file",
-		})
+        setmap("n", "<leader>tl", function()
+            lint.try_lint()
+        end, {desc = "Trigger linting for the current file"})
 
-		setmap("n", "<leader>ll", vim.diagnostic.setloclist, {
-			desc = "Location list diagnostic",
-		})
+		setmap("n", "<leader>ll", function()
+            vim.diagnostic.setloclist()
+        end, {desc = "Location list diagnostic"})
 
-		setmap("n", "<leader>ql", vim.diagnostic.setqflist, {
-			desc = "QuickFix list diagnostic",
-		})
+		setmap("n", "<leader>ql", function()
+		    vim.diagnostic.setqflist()
+        end, {desc = "QuickFix list diagnostic"})
 
-		setmap("n", "<leader>dl", vim.diagnostic.open_float, {
-			desc = "Diagnostic line",
-		})
+		setmap("n", "<leader>dl", function()
+		    vim.diagnostic.open_float()
+        end, {desc = "Diagnostic line"})
 
-		setmap("n", "]d", vim.diagnostic.goto_next, {
-			desc = "Go to next diagnostic",
-		})
+		setmap("n", "]d", function() 
+            vim.diagnostic.goto_next()
+        end, {desc = "Go to next diagnostic"})
 
-		setmap("n", "[d", vim.diagnostic.goto_prev, {
-			desc = "Go to previous diagnostic",
-		})
+		setmap("n", "[d", function()
+		    vim.diagnostic.goto_prev()
+        end, {desc = "Go to previous diagnostic"})
 	end,
 }

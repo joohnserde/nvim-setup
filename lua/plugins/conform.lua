@@ -18,7 +18,7 @@ return {
 		--- Keymap Format
         local setmap = vim.keymap.set
 
-		setmap({ "n", "v" }, "<leader>f", function()
+		setmap({ "n", "v" }, "<leader>fc", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
