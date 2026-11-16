@@ -1,5 +1,5 @@
 require("config.misc")
-require("color.blackmode")
+require("color.bluemode")
 require("config.lazy")
 require("config.common_keymap")
 
